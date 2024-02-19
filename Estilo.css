@@ -1,46 +1,110 @@
+<<<<<<< HEAD
 /*Estilo para encabezado PRIMERA VERSION*/
 header{
     background-color: rgb(206, 162, 103);
     color: #3b2727;
     text-align: center;
+=======
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+* {
+  box-sizing: border-box;
+  user-select: none;
+>>>>>>> universe7
 }
 
-/*Estilos para el contenido principal*/
-
-main{
-    color: aliceblue;
-    text-align: start;
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.image {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    transition: transform 0.3s ease;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: white;
+  background: black;
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
 }
 
-.image img {
-    display: block;
-    max-width: 100%;
-    height: 200px;
-    transition: transform 0.3s ease;
+h2 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: #cccccc;
+  width: 90vw;
+  max-width: 1200px;
 }
 
-.image:hover img {
-    transform: scale(1.1); /* La imagen se agranda al pasar el cursor */
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
 }
 
-
-body{
-    background-color: #333;
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+section .outer,
+section .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+section .bg h2 {
+  z-index: 2;
+}
+section .bg .clip-text {
+  overflow: hidden;
 }
 
-/*Estilos para el pie de pagina*/
+.first .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("Assets/First1.jpg");
+}
 
-footer{
+.second .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("Assets/Second.jpg");
+}
 
-    
+.third .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("Assets/Third.jpg");
+}
 
+.fourth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("Assets/Four.jpg");
+}
+
+.fifth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("Assets/FocosMovibles3.jpg");
+  background-position: 50% 45%;
+}
+
+h2 * {
+  will-change: transform;
 }
