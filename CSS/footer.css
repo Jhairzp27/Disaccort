@@ -1,74 +1,68 @@
+/* styles.css */
 .footer {
-    position: relative;
-    width: 100%;
-    background: #286bcf;
-    min-height: 100px;
-    padding: 20px 50px;
+    background-color: #1f2025;
+    padding: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
-.social-icon {
+.row {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin: 10px 5px;
-    flex-wrap: wrap;
-}
-
-.icon-elem {
-    list-style: none;
-}
-
-.icon {
-    color: white;
-    font-size: 32px;
-    display: inline-block;
-    margin: 0 10px;
-    transition: 0.5s;
-}
-
-.icon:hover {
-    transform: translateY(-10px);
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-
-.menu-elem {
-    list-style: none;
-    margin: 15px;
     margin-bottom: 10px;
-    font-size: 20px;
 }
 
+.social-icon ul,
+.footer-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.icon-elem,
+.menu-elem {
+    margin: 0 10px;
+}
+
+.icon,
 .menu-icon {
-    /* color: white; */
-    font-size: 20px;
-    display: inline-block;
-    text-decoration: none;
-    margin: 5px 10px;
-    opacity: 0.5;
-    transition: 0.3s;
+    color: rgb(143, 114, 81);
+    font-size: 24px;
+    transition: transform 0.5s; /* Transición de la propiedad transform */
 }
 
+.icon:hover,
 .menu-icon:hover {
-    opacity: 1;
+    transform: translateY(-5px); /* Desplazar el icono hacia arriba al estar en estado de :hover */
 }
 
 .text {
-    color: white;
+    color: #303238;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .footer {
+        padding: 10px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .icon,
+    .menu-icon {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 14px;
+    }
 }
