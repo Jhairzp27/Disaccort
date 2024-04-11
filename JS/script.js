@@ -26,6 +26,7 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// HEADER MOVIBLE CON CAMBIO DE EFECTO
 window.addEventListener('scroll', function() {
     var header = document.getElementById('header');
     if (window.scrollY === 0) {
@@ -35,7 +36,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ============== GALLERY ======= 
+// ============== GALLERY =======
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -102,3 +103,8 @@ thumbnails.forEach((thumbnail, index) => {
         handleThumbnailClick(index);
     })
 })
+
+//===================FOOTER==========
+var yearElement = document.getElementById('year');
+var currentYear = new Date().getFullYear();
+yearElement.textContent = '@' + currentYear + '| Todos los derechos reservados';

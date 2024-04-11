@@ -16,6 +16,11 @@
     margin-bottom: 10px;
 }
 
+.footer-menu{
+    font-size: 18px;
+    color: aliceblue;
+}
+
 .social-icon ul,
 .footer-menu ul {
     padding: 0;
@@ -29,23 +34,20 @@
     margin: 0 10px;
 }
 
-.icon,
-.menu-icon {
+.icon{
     color: rgb(143, 114, 81);
-    font-size: 24px;
-    transition: transform 0.5s; /* Transición de la propiedad transform */
+    font-size: 25px;
 }
-
-.icon:hover,
-.menu-icon:hover {
-    transform: translateY(-5px); /* Desplazar el icono hacia arriba al estar en estado de :hover */
+.menu-texto{
+    color: rgb(98, 77, 54);
+    font-size: 15px;
 }
 
 .text {
     color: #303238;
     text-align: center;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Estilos para dispositivos móviles */
@@ -58,9 +60,11 @@
         align-items: center;
         margin-bottom: 20px;
     }
-    .icon,
-    .menu-icon {
+    .icon{
         font-size: 20px;
+    }
+    .menu-texto{
+        font-size: 16px;
     }
     .text {
         font-size: 14px;
