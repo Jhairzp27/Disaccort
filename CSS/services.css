@@ -1,0 +1,103 @@
+/* Estilos Generales */
+.services-section {
+    background-image: url('/Assets/Panelada-Beige-LampRedonda.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+/* Estilos de la Línea de Tiempo */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline:hover:before {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Estilos de las Tarjetas */
+.timeline-item {
+    position: relative;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.timeline-item h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.timeline-item.active h2 {
+    color: #ffcc00; /* Color de nodo activo */
+}
+
+.timeline-item p {
+    margin: 15px 0 0;
+    font-size: 20px;
+    color: #ddd;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
