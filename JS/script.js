@@ -194,41 +194,44 @@ document.addEventListener('scroll', () => {
 // =====================SERVICES======================
 document.addEventListener('DOMContentLoaded', function () {
     const timelineItems = document.querySelectorAll('.timeline-item');
-
-    let lastScrollTop = 0;
-    let visibleIndex = 0;
+    const timelineNodes = document.querySelectorAll('.timeline-node');
+    const timelineLineFilled = document.querySelector('.timeline-line-filled');
 
     function checkTimelineItems() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let activeCount = 0;
 
-        if (scrollTop > lastScrollTop) {
-            // Scroll hacia abajo
-            if (visibleIndex < timelineItems.length) {
-                timelineItems[visibleIndex].classList.add('active');
-                visibleIndex++;
-            }
-        } else {
-            // Scroll hacia arriba
-            if (visibleIndex > 0) {
-                visibleIndex--;
-                timelineItems[visibleIndex].classList.remove('active');
-            }
-        }
+        timelineItems.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+            const itemMiddle = rect.top + rect.height / 2;
+            const windowMiddle = window.innerHeight / 2;
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            if (itemMiddle < windowMiddle) {
+                item.classList.add('active');
+                timelineNodes[index].classList.add('active'); // Activar nodo correspondiente
+                activeCount++;
+            } else {
+                item.classList.remove('active');
+                timelineNodes[index].classList.remove('active'); // Desactivar nodo correspondiente
+            }
+        });
+
+        updateTimelineLineFilled(activeCount);
     }
 
-    // Comprobar al cargar la página
-    checkTimelineItems();
+    function updateTimelineLineFilled(activeCount) {
+        const totalItems = timelineItems.length;
+        const progressHeight = (activeCount / totalItems) * 100;
+        timelineLineFilled.style.height = `${progressHeight}%`;
+    }
 
-    // Comprobar al hacer scroll
-    window.addEventListener('scroll', debounce(checkTimelineItems, 50)); // Añadimos debounce para mejorar el rendimiento
+    checkTimelineItems();
+    window.addEventListener('scroll', debounce(checkTimelineItems, 100));
 });
 
-// Función debounce para mejorar el rendimiento
+// Función de debounce para optimizar el evento de scroll
 function debounce(func, wait) {
     let timeout;
-    return function executedFunction(...args) {
+    return function (...args) {
         const later = () => {
             clearTimeout(timeout);
             func(...args);
@@ -237,4 +240,3 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-
