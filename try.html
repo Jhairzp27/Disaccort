@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px; /* Altura de la imagen */
+            overflow: hidden; /* Para recortar el texto que esté fuera de la imagen */
+        }
+
+        .image {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+            color: #fff;
+            text-align: right;
+            width: 50%; /* La mitad del contenedor */
+        }
+
+        .outside-text {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            width: 50%; /* La otra mitad del contenedor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Assets/FocosMovibles (2).jpg" alt="Imagen sorprendente" class="image">
+        <div class="text-overlay">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo euismod, cursus libero vel, aliquet urna.</p>
+        </div>
+        <p class="outside-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo euismod, cursus libero vel, aliquet urna.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, cum.</p>
+    </div>
+</body>
+</html>
