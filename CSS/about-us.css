@@ -1,82 +1,105 @@
-/* Estilo general de la sección */
+/* Degradado general de la sección */
 .about-section {
-    background: linear-gradient(to bottom, #1c1c1c, #2c2c2c); /* Gradiente oscuro */
-    color: #f0e6d2; /* Texto color marfil */
-    padding: 60px 20px;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Historia */
-.about-history {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 50px;
-}
-
-.history-image img {
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.history-text {
-    max-width: 50%;
-    padding: 20px;
-}
-
-.history-text h2 {
-    color: #d4af37; /* Título en color dorado */
-    font-size: 2em;
-}
-
-.history-text p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Misión y Visión */
-.about-mission-vision {
+    background: linear-gradient(
+        to bottom,
+        #1A1818, /* Color de la sección anterior */
+        #2C1E16 20%, /* Color más oscuro en el inicio */
+        #A96F44 50%, /* Color intermedio */
+        #F2ECB6 80%  /* Color claro hacia abajo */
+    );
+    color: white;
+    padding: 50px 0;
     position: relative;
-    text-align: center;
-    margin-bottom: 50px;
+    overflow: hidden; /* Para evitar que contenido sobrepase los límites */
 }
 
-.background-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    filter: brightness(50%); /* Filtro opaco para el fondo */
-}
-
-.mission-vision-cards {
+/* Ajustes de la sección de Historia y Misión/Vision */
+.about-history, .about-mission-vision {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Asegura que las tarjetas estén siempre sobre la imagen */
+    flex-direction: column;
 }
 
-.card {
-    background-color: rgba(44, 44, 44, 0.8); /* Fondo oscuro y semitransparente */
-    color: #f0e6d2; /* Texto marfil */
+/* Estilos para la tarjeta de "Nuestra Historia" */
+.about-history .card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white;
     padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    width: 50%; /* Ajusta el ancho de la tarjeta de "Nuestra Historia" */
+    max-width: 600px; /* Ancho máximo */
+    margin-top: 0px; /* Ajusta la posición original */
+    position: relative;
+    z-index: 3; /* Para asegurarse de que no quede oculta */
+    top: -20px; /* Bajar la tarjeta de "Nuestra Historia" 30px desde la posición anterior (-20px) */
 }
 
-.card h3 {
-    color: #d4af37; /* Título dorado */
+
+/* Ajustes de las tarjetas de Misión y Visión */
+.mission-vision-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Ajusta el ancho de las tarjetas */
+    padding: 20px;
+    margin-top: 50px; /* Agrega un espacio entre la tarjeta de historia y las otras tarjetas */
+    position: relative; /* Las mantiene relativas para evitar que se solapen */
+    z-index: 2; /* Garantiza que las tarjetas estén por encima de la imagen */
+}
+
+/* Estilos para las tarjetas de Misión y Visión */
+.mission-vision-cards .card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    width: 48%; /* Ajusta el ancho de cada tarjeta para que ocupen espacio lado a lado */
+    position: relative;
+}
+
+/* Imagen de fondo para misión y visión */
+.background-image img {
+    width: 1200px; /* Ancho máximo de la imagen */
+    height: 200px; /* Altura ajustada a 200px */
+    opacity: 0.75; /* Aplica opacidad del 75% */
+    position: absolute;
+    z-index: 0; /* Asegura que esté detrás del contenido */
+    top: calc(50% - 55px); /* Ajusta la posición de la imagen hacia arriba (55px) */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen horizontal y verticalmente */
+    object-fit: cover; /* Cubre el área asignada sin distorsionarse */
+    max-width: 100%; /* Evita que la imagen se salga del contenedor en pantallas pequeñas */
+}
+
+
+/* Efecto hover para todas las tarjetas */
+.card:hover {
+    transform: scale(1.05); /* Escalado suave */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    z-index: 3; /* Aumenta el z-index en hover para estar sobre otros elementos */
+}
+
+/* Tipografía para títulos con color dorado */
+h2, h3 {
+    font-size: 24px;
     margin-bottom: 10px;
+    color: #FFC107; /* Color dorado */
 }
 
-.card p {
-    font-size: 1em;
+/* Texto de los párrafos */
+p {
+    font-size: 16px;
     line-height: 1.6;
 }
+
 
 /* Testimonios */
 .about-testimonials {
