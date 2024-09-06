@@ -79,6 +79,7 @@
 }
 
 /* Testimonios */
+
 .about-testimonials {
     text-align: center;
 }
@@ -92,30 +93,100 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
 .testimonial-card {
     background-color: #333;
     padding: 20px;
-    width: 200px;
+    width: 250px; /* Ajuste del ancho de las tarjetas */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: left;
+    opacity: 0.5; /* Opaco por defecto */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9); /* Reducir ligeramente las tarjetas laterales */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de la tarjeta */
+}
+.testimonial-card.active {
+    opacity: 1; /* Resalta el testimonio activo */
+    transform: scale(1); /* Aumenta el tamaño del testimonio activo */
 }
 
 .testimonial-card img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-bottom: 5px;
+    display: block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto; /* Centra la imagen */
+}
+
+.google-logo {
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px; /* Misma altura que la imagen */
+    right: 10px; /* Pegado al lado derecho */
+    transition: color 0.5s ease;
+    color: #ccc; /* Color gris por defecto */
+}
+
+/* Cambia el color del logo y las estrellas cuando la tarjeta está activa */
+.testimonial-card.active .google-logo,
+.testimonial-card.active .testimonial-rating i {
+    color: #d4af37; /* Cambia a dorado cuando la tarjeta está activa */
+}
+
+.testimonial-rating {
+    font-size: 1.2em;
+    color: #ccc;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+.testimonial-rating i {
+    margin-right: 3px;
 }
 
 .testimonial-text {
     font-size: 0.9em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
 }
 
-.testimonial-rating {
-    color: #d4af37; /* Color dorado para las estrellas */
-    font-size: 1.1em;
+.testimonial-name {
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.testimonial-date {
+    font-size: 0.75em;
+    color: #999;
+}
+
+/* Botones de navegación del carrusel */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #d4af37;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-nav.left {
+    left: 0;
+}
+
+.carousel-nav.right {
+    right: 0;
 }

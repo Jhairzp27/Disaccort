@@ -237,7 +237,10 @@ let currentIndex = 0;
 
 function showTestimonial(index) {
     testimonials.forEach((testimonial, i) => {
-        testimonial.style.display = i === index ? 'block' : 'none';
+        testimonial.classList.remove('active');
+        if (i === index) {
+            testimonial.classList.add('active');
+        }
     });
 }
 
@@ -246,4 +249,17 @@ function nextTestimonial() {
     showTestimonial(currentIndex);
 }
 
-setInterval(nextTestimonial, 5000); // Cambia de testimonio cada 5 segundos
+function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentIndex);
+}
+
+// Rotación automática cada 5 segundos
+setInterval(nextTestimonial, 5000);
+
+// Agregar funcionalidad a botones de navegación
+document.querySelector('.carousel-nav.left').addEventListener('click', prevTestimonial);
+document.querySelector('.carousel-nav.right').addEventListener('click', nextTestimonial);
+
+// Mostrar el primer testimonio al cargar la página
+showTestimonial(currentIndex);
