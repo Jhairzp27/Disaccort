@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     checkTimelineItems();
-    window.addEventListener('scroll', debounce(checkTimelineItems, 100));
+    window.addEventListener('scroll', debounce(checkTimelineItems, 150));
 });
 
 // Función de debounce para optimizar el evento de scroll
@@ -232,34 +232,71 @@ function debounce(func, wait) {
 }
 
 //===========ABOUT US===============
-const testimonials = document.querySelectorAll('.testimonial-card');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.testimonials-carousel');
+    const cards = document.querySelectorAll('.testimonial-card');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
 
-function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-        testimonial.classList.remove('active');
-        if (i === index) {
-            testimonial.classList.add('active');
-        }
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    // Función para actualizar las tarjetas visibles
+    const updateCarousel = () => {
+        cards.forEach((card, index) => {
+            card.classList.remove('left', 'right', 'active', 'inactive');
+
+            // Posicionamiento relativo a la tarjeta central
+            const relativeIndex = (index - currentIndex + cards.length) % cards.length;
+
+            if (relativeIndex === 0) {
+                card.classList.add('active'); // Tarjeta central
+            } else if (relativeIndex === 1) {
+                card.classList.add('right'); // Tarjeta a la derecha
+            } else if (relativeIndex === cards.length - 1) {
+                card.classList.add('left'); // Tarjeta a la izquierda
+            } else {
+                card.classList.add('inactive'); // Otras tarjetas (ocultas)
+            }
+        });
+    };
+
+    // Función para avanzar
+    const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCarousel();
+    };
+
+    // Función para retroceder
+    const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateCarousel();
+    };
+
+    // Función para iniciar el carrusel automático
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(nextSlide, 9000); // Cambia de tarjeta cada 9 segundos
+    };
+
+    // Detener el auto-slide si el usuario interactúa manualmente
+    const stopAutoSlide = () => {
+        clearInterval(autoSlideInterval);
+    };
+
+    // Inicializar el carrusel
+    updateCarousel();
+    startAutoSlide(); // Comenzar el carrusel automático
+
+    // Añadir eventos a los botones
+    nextButton.addEventListener('click', () => {
+        nextSlide();
+        stopAutoSlide(); // Detener el auto-slide al hacer clic
+        startAutoSlide(); // Reiniciar el auto-slide
     });
-}
 
-function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-}
-
-function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
-}
-
-// Rotación automática cada 5 segundos
-setInterval(nextTestimonial, 5000);
-
-// Agregar funcionalidad a botones de navegación
-document.querySelector('.carousel-nav.left').addEventListener('click', prevTestimonial);
-document.querySelector('.carousel-nav.right').addEventListener('click', nextTestimonial);
-
-// Mostrar el primer testimonio al cargar la página
-showTestimonial(currentIndex);
+    prevButton.addEventListener('click', () => {
+        prevSlide();
+        stopAutoSlide(); // Detener el auto-slide al hacer clic
+        startAutoSlide(); // Reiniciar el auto-slide
+    });
+});
