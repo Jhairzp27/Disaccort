@@ -31,12 +31,12 @@
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
+    margin: 20px 0;
     width: 50%; /* Ajusta el ancho de la tarjeta de "Nuestra Historia" */
     max-width: 600px; /* Ancho máximo */
     margin-top: 0px; /* Ajusta la posición original */
     position: relative;
-    z-index: 3; /* Para asegurarse de que no quede oculta */
+    z-index: 20; /* Para asegurarse de que no quede oculta */
     top: -20px; /* Bajar la tarjeta de "Nuestra Historia" 30px desde la posición anterior (-20px) */
 }
 
@@ -77,6 +77,17 @@
     transform: translate(-50%, -50%); /* Centra la imagen horizontal y verticalmente */
     object-fit: cover; /* Cubre el área asignada sin distorsionarse */
     max-width: 100%; /* Evita que la imagen se salga del contenedor en pantallas pequeñas */
+}
+
+/* Contenedor de íconos */
+.icon-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icon-container i {
+    font-size: 2em;
+    color: #FFC107; /* Color dorado para los íconos */
 }
 
 
@@ -186,35 +197,45 @@ p {
     justify-content: space-between;
     transform: translateY(-50%);
     z-index: 10;
-    padding: 0 40px; /* Reducir la separación entre los botones */
+    padding: 0 40px;
 }
 
-/* Botones de navegación */
+/* Estilo de los botones sin círculo */
 .carousel-button {
-    background-color: rgba(255, 255, 255, 0.3); /* Transparencia para suavizar el color */
-    border: 2px solid #d4af37; /* Añadir un borde dorado */
-    color: #d4af37; /* Color dorado para los íconos */
-    font-size: 1.5em; /* Ajustar tamaño del icono */
-    padding: 10px;
-    border-radius: 50%; /* Mantener los botones redondeados */
+    background: none; /* Eliminar fondo */
+    border: none; /* Eliminar bordes */
+    color: #d4af37; /* Color dorado para las flechas */
+    font-size: 2.5em; /* Aumentar tamaño de las flechas */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra para hacer que resalten */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-button:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Cambiar el color de fondo al hacer hover */
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
+    color: #fff; /* Las flechas cambian de color al hacer hover */
+    transform: scale(1.2); /* Aumentar ligeramente el tamaño al hacer hover */
 }
 
-/* Reducir la distancia entre los botones */
+.carousel-button:focus {
+    outline: none; /* Eliminar el borde de enfoque al hacer clic */
+}
+
+/* Ajuste de la posición para las flechas */
 .carousel-button.prev {
-    margin-right: 10px; /* Ajustar margen derecho */
+    margin-right: 15px;
 }
 
 .carousel-button.next {
-    margin-left: 10px; /* Ajustar margen izquierdo */
+    margin-left: 15px;
 }
+
+/* Ajustar la separación entre los botones y el borde del contenedor */
+.carousel-controls {
+    padding: 0 20px;
+}
+
 
 /* Íconos de las tarjetas inactivas */
 .testimonial-card .google-logo,
@@ -238,17 +259,29 @@ p {
 @media (max-width: 768px) {
     /* General */
     .about-section {
-        padding: 20px 10px;
+        padding: 120px 10px;
     }
 
     /* Ajustes de las tarjetas de historia, misión y visión */
-    .about-history .card,
+    /* Mover la tarjeta de Historia hacia arriba */
+    .about-history .card {
+        position: relative;
+        z-index: 10; /* Asegura que esté encima de otros elementos */
+        top: -100px; /* Ajuste según lo que necesites para que la tarjeta suba */
+        margin-top: 0; /* Eliminar cualquier margen superior existente */
+        width: 90%; /* Asegura que ocupe todo el ancho de la pantalla */
+    }
+
     .mission-vision-cards .card {
         width: 100%; /* Las tarjetas ocupan el 100% del ancho en móviles */
         max-width: none;
         margin: 10px 0; /* Margen reducido para mantener espacio entre tarjetas */
         padding: 15px; /* Reducir el padding para móviles */
         font-size: 14px; /* Reducir el tamaño de la fuente */
+        z-index: 10;
+    }
+    .icon-container i {
+        font-size: 1.5em; /* Reducción del tamaño del ícono en móviles */
     }
 
     .mission-vision-cards {
@@ -261,6 +294,7 @@ p {
     .background-image img {
         width: 100%; /* Asegura que la imagen se ajuste al ancho de la pantalla */
         height: auto; /* Mantener la proporción de la imagen */
+        z-index: 0;
     }
 
     .testimonials-carousel {
