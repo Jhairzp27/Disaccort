@@ -34,7 +34,7 @@ a{
 }
 /* Da color cuando el mouse esta sobre el*/
 a:hover{
-    color: orangered;
+    color: #ffc925;
 }
 
 /*HEADER*/
@@ -54,9 +54,23 @@ header{
     padding: 10px 0;
 }
 
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
 .navbar .logo a{
+    display: flex;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    /* Ajusta el margen para mover el logo hacia arriba o hacia abajo */
+    margin-top: 10px;
+}
+
+.navbar .logo img {
+    margin-right: 10px; /* Espacio entre el logo y la palabra */
+    /* Puedes usar transform para ajustar su posición de forma más precisa */
 }
 
 .navbar .links{
@@ -72,7 +86,7 @@ header{
 }
 
 .action_btn{
-    background-color: black;
+    background-color: #ffc925;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;

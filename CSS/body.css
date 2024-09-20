@@ -12,13 +12,26 @@ html {
 
 body {
     background-color: #1f2025;
-    color: #c4c3ca;
+    color: #ced0ce;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     overflow-x: hidden;
 }
 
 section {
     min-height: 100vh;
+}
+
+/* Tipografía para títulos con color dorado */
+h2, h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f2c101; /* Color dorado */
+}
+
+/* Texto de los párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* REDES LATERALES */
@@ -117,7 +130,7 @@ section {
 }
 
 .slider .list .item .content .read-more {
-    margin-left: 424px;
+    margin-left: 420px;
     background-color: #eee5;
     color: #eee;
     border: 1px;
@@ -146,14 +159,14 @@ section {
     height: 40px;
     border-radius: 5px;
     font-size: x-large;
-    color: #eee;
+    color: #ced0ce;
     transition: .5s;
     cursor: pointer;
 }
 
 .arrows button:hover {
-    background-color: #eee;
-    color: black;
+    background-color: #1a1818;
+    color: #ced0ce;
 }
 
 .thumbnail {

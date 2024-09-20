@@ -110,10 +110,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineNodes = document.querySelectorAll('.timeline-node');
     const timelineLineFilled = document.querySelector('.timeline-line-filled');
+    const counters = document.querySelectorAll('.counter-number');
+    
+    // Función de animación de los contadores
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.parentElement.getAttribute('data-target');
+            const updateCount = () => {
+                const current = +counter.innerText;
+                const increment = Math.ceil(target / 100); // Incremento gradual
+                if (current < target) {
+                    counter.innerText = current + increment;
+                    setTimeout(updateCount, 50);
+                } else {
+                    counter.innerText = target; // Asegura que termine en el número correcto
+                }
+            };
+            updateCount();
+        });
+    };
 
-    // Define un offset para activar las animaciones antes de que los elementos lleguen al centro de la ventana
-    const activationOffset = 200; // Ajusta este valor para que las animaciones se activen antes o después
+    // Función para activar los contadores al hacer scroll
+    const checkCounters = () => {
+        const triggerBottom = window.innerHeight / 1.3; // Ajustar cuando se activa
+        const countersContainer = document.querySelector('.counter-container');
+        const containerTop = countersContainer.getBoundingClientRect().top;
+        if (containerTop < triggerBottom) {
+            animateCounters();
+            window.removeEventListener('scroll', checkCounters); // Remover evento una vez activado
+        }
+    };
 
+    window.addEventListener('scroll', checkCounters);
+
+    // Lógica de la línea de tiempo
+    const activationOffset = 200;
     const updateTimelineLineFilled = (activeCount) => {
         timelineLineFilled.style.height = `${(activeCount / timelineItems.length) * 100}%`;
     };
@@ -121,24 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkTimelineItems = () => {
         let activeCount = 0;
         const windowMiddle = window.innerHeight / 2;
-
         timelineItems.forEach((item, index) => {
             const itemMiddle = item.getBoundingClientRect().top + item.clientHeight / 2;
-            const isActive = itemMiddle < windowMiddle + activationOffset;  // Aquí agregamos el offset
-
+            const isActive = itemMiddle < windowMiddle + activationOffset;
             item.classList.toggle('active', isActive);
             timelineNodes[index].classList.toggle('active', isActive);
-            
             if (isActive) activeCount++;
         });
-
         updateTimelineLineFilled(activeCount);
     };
 
     window.addEventListener('scroll', debounce(checkTimelineItems, 20));
     checkTimelineItems();
 });
-
 
 // Debounce function for scroll optimization
 function debounce(func, wait) {

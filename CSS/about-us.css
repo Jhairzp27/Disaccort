@@ -14,7 +14,14 @@
 }
 
 /* Ajustes de la sección de Historia y Misión/Vision */
-.about-history, .about-mission-vision {
+.about-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.about-mission-vision {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,19 +32,132 @@
 
 /* Estilos para la tarjeta de "Nuestra Historia" */
 .about-history .card {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: row;
+    overflow: hidden;
     color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 20px 0;
-    width: 50%; /* Ajusta el ancho de la tarjeta de "Nuestra Historia" */
-    max-width: 600px; /* Ancho máximo */
-    margin-top: 0px; /* Ajusta la posición original */
+    width: 80%;
+    max-width: 900px;
     position: relative;
-    z-index: 20; /* Para asegurarse de que no quede oculta */
-    top: -20px; /* Bajar la tarjeta de "Nuestra Historia" 30px desde la posición anterior (-20px) */
+}
+
+.about-history .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7); /* Sombra más fuerte en hover */
+}
+
+.about-history .author-image {
+    width: 40%; /* Asegura que la imagen ocupe el 40% del ancho de la tarjeta */
+    object-fit: cover;
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+.about-history .card-content {
+    width: 60%; /* El contenido ocupará el 60% del ancho */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-history h2 {
+    font-family: 'Georgia', serif;
+    font-size: 26px;
+    color: #FFC107;
+    margin-bottom: 15px;
+}
+
+.about-history p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    background-color: #d4af37; /* Color dorado */
+    color: #1A1818; /* Color oscuro para el texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suave transición en color */
+}
+
+.read-more:hover {
+    background-color: #f2cb6b; /* Color más claro para el hover */
+    color: #1A1818; /* Mantener el contraste */
+}
+
+
+.read-more-container {
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.read-more-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #555;
+}
+
+.logo-container {
+    margin-top: 15px;
+}
+
+.company-logo {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    max-height: 50px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.company-logo:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.author-info {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.author-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.author-role {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #d4af37; /* Dorado inicial */
+    margin-right: 10px;
+    font-size: 1.8em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f2cb6b; /* Color más claro en hover */
 }
 
 
@@ -97,20 +217,6 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
     z-index: 3; /* Aumenta el z-index en hover para estar sobre otros elementos */
 }
-
-/* Tipografía para títulos con color dorado */
-h2, h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #FFC107; /* Color dorado */
-}
-
-/* Texto de los párrafos */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
 
 /* Testimonios */
 .about-testimonials {
@@ -270,6 +376,32 @@ p {
         top: -100px; /* Ajuste según lo que necesites para que la tarjeta suba */
         margin-top: 0; /* Eliminar cualquier margen superior existente */
         width: 90%; /* Asegura que ocupe todo el ancho de la pantalla */
+        flex-direction: column; /* Cambia a apilar los elementos verticalmente */
+        width: 90%; /* Aumenta el ancho de la tarjeta para aprovechar el espacio disponible */
+        
+    }
+
+    .about-history .author-image {
+        width: 100%; /* La imagen ocupará todo el ancho en pantallas pequeñas */
+        height: auto;
+    }
+
+    .about-history .card-content {
+        width: 100%; /* El contenido también ocupará todo el ancho */
+        padding: 20px;
+    }
+
+    .about-history h2 {
+        font-size: 22px; /* Reduce ligeramente el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .about-history p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .read-more {
+        font-size: 14px; /* Ajusta el tamaño del botón */
+        padding: 8px 16px;
     }
 
     .mission-vision-cards .card {
