@@ -5,7 +5,7 @@
         #1A1818, /* Color de la sección anterior */
         #2C1E16 20%, /* Color más oscuro en el inicio */
         #A96F44 50%, /* Color intermedio */
-        #F2ECB6 80%  /* Color claro hacia abajo */
+        #D3B78B 80%  /* Color claro hacia abajo */
     );
     color: white;
     padding: 50px 0;
@@ -69,7 +69,7 @@
 .about-history h2 {
     font-family: 'Georgia', serif;
     font-size: 26px;
-    color: #FFC107;
+    color: #f7b801;
     margin-bottom: 15px;
 }
 
@@ -227,7 +227,7 @@
 }
 
 .about-testimonials h2 {
-    color: #d4af37;
+    color: #fac411;
     margin-bottom: 40px;
     font-size: 2em;
 }

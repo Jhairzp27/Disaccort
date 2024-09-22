@@ -34,7 +34,7 @@ a{
 }
 /* Da color cuando el mouse esta sobre el*/
 a:hover{
-    color: #ffc925;
+    color: #000814;
 }
 
 /*HEADER*/
@@ -86,7 +86,7 @@ header{
 }
 
 .action_btn{
-    background-color: #ffc925;
+    background-color: #000814;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;

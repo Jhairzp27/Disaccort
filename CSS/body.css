@@ -1,3 +1,11 @@
+/* Importar la fuente OPTIVerona desde la carpeta 'Assets' */
+@font-face {
+    font-family: 'OPTIVerona';
+    src: url('/Assets/OPTIVerona.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +29,12 @@ section {
     min-height: 100vh;
 }
 
-/* Tipografía para títulos con color dorado */
+/* Tipografía para títulos con la nueva fuente y color dorado */
 h2, h3 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
     color: #f2c101; /* Color dorado */
+    font-family: 'OPTIVerona', sans-serif; /* Aplicar la nueva tipografía */
 }
 
 /* Texto de los párrafos */
@@ -47,7 +56,6 @@ p {
     display: block;
     margin-bottom: 20px;
 }
-
 
 /* CSS SLIDER */
 .slider {
@@ -214,39 +222,32 @@ p {
 
 /* Estilos personalizados para cada imagen del carrusel */
 #slider-image-1 {
-    /* border: 2px solid red; */
     object-position: 35% center;
 }
 
 #slider-image-2 {
-    /* border: 2px solid blue; */
     object-position: 30% center;
 }
 
 #slider-image-3 {
-    /* border: 2px solid green; */
     object-position: center;
 }
 
 #slider-image-4 {
-    /* border: 2px solid orange; */
     object-position: center;
 }
 
 #slider-image-5 {
-    /* border: 2px solid purple; */
     object-position: 70% center;
 }
 
 @media screen and (min-width: 1024px) {
     #slider-image-2 {
         object-position: center 45%;
-        /* Mover hacia abajo un 20% */
     }
 
     #slider-image-3 {
         object-position: center 25%;
-        /* Mover hacia abajo un 20% */
     }
 }
 
@@ -265,7 +266,6 @@ p {
     }
 
     .slider .list .item .content .read-more {
-        /* Margen izquierdo más pequeño para pantallas pequeñas */
         margin-left: 10px;
     }
 }
