@@ -222,11 +222,11 @@ p {
 
 /* Estilos personalizados para cada imagen del carrusel */
 #slider-image-1 {
-    object-position: 35% center;
+    object-position: 75% center;
 }
 
 #slider-image-2 {
-    object-position: 30% center;
+    object-position: 0% center;
 }
 
 #slider-image-3 {

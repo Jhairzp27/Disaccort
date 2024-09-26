@@ -1,7 +1,7 @@
 /* Ajuste de la sección de servicios */
 .services-section {
     position: relative;
-    min-height: 120vh; /* Tamaño mayor para toda la sección */
+    min-height: 90vh; /* Tamaño mayor para toda la sección */
     padding: 100px 20px; /* Espacio para el contenido */
     display: flex;
     flex-direction: column;
@@ -33,6 +33,11 @@
     color: #ffffff;
 }
 
+.counter .texto{
+    margin-top: 10px; /* Controla la distancia entre el número y el texto */
+    font-size: 1em;
+}
+
 /* Gradiente en la parte superior y estilo del título */
 .services-header {
     text-align: center;
@@ -48,6 +53,7 @@
 .services-header p {
     font-size: 18px;
     color: #ddd;
+    margin-bottom: 0px; /*Controla la distancia entre el parrafo y la linea de tiempo*/
 }
 
 /* Estilos de la Línea de Tiempo */
@@ -60,6 +66,8 @@
     margin: 80px 0;
     padding: 80px 20px;
     min-height: 800px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .timeline {
