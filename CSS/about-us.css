@@ -150,13 +150,15 @@
     font-size: 14px;
     color: #888;
     margin-bottom: 10px;
+    text-align: right;
 }
 
 .social-icons a {
-    color: #d4af37; /* Dorado inicial */
+    color: #f0803c; /* Dorado inicial */
     margin-right: 10px;
     font-size: 1.8em;
     transition: color 0.3s ease;
+    float: right;
 }
 
 .social-icons a:hover {
@@ -186,6 +188,10 @@
     margin: 20px;
     width: 48%; /* Ajusta el ancho de cada tarjeta para que ocupen espacio lado a lado */
     position: relative;
+}
+
+.mission-vision-cards h3{
+    text-align: center;
 }
 
 /* Imagen de fondo para misión y visión */
@@ -230,7 +236,7 @@
 }
 
 .about-testimonials h2 {
-    color: #fac411;
+    color: #1f2025;
     margin-bottom: 40px;
     font-size: 2em;
 }
@@ -313,7 +319,7 @@
 .carousel-button {
     background: none; /* Eliminar fondo */
     border: none; /* Eliminar bordes */
-    color: #d4af37; /* Color dorado para las flechas */
+    color: #1A1818; /* Color dorado para las flechas */
     font-size: 2.5em; /* Aumentar tamaño de las flechas */
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
