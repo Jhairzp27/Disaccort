@@ -55,12 +55,19 @@ header{
 }
 
 .navbar .logo {
-    display: flex;
+    display: inline-block;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar .logo a{
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
@@ -69,6 +76,8 @@ header{
 }
 
 .navbar .logo img {
+    width: auto;
+    height: 40px;
     margin-right: 10px; /* Espacio entre el logo y la palabra */
     /* Puedes usar transform para ajustar su posición de forma más precisa */
 }
