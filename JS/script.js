@@ -232,4 +232,11 @@ buttons.forEach(function(button) {
         var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
         window.open(url, '_blank');
     });
+
+    // Agregar el evento touchstart para dispositivos móviles
+    button.addEventListener("touchstart", function() {
+        var message = this.getAttribute("data-message");
+        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+    });
 });
