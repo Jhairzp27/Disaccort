@@ -33,7 +33,7 @@
     color: #ffffff;
 }
 
-.counter .texto{
+.counter .texto {
     margin-top: 10px; /* Controla la distancia entre el número y el texto */
     font-size: 1em;
 }
@@ -53,7 +53,7 @@
 .services-header p {
     font-size: 18px;
     color: #ddd;
-    margin-bottom: 0px; /*Controla la distancia entre el parrafo y la linea de tiempo*/
+    margin-bottom: 0px; /*Controla la distancia entre el párrafo y la línea de tiempo*/
 }
 
 /* Estilos de la Línea de Tiempo */
@@ -235,6 +235,7 @@
     .timeline-node {
         width: 40px;
         height: 40px;
+        margin-bottom: 60px;
     }
 
     .timeline-item {
@@ -256,5 +257,38 @@
 
     .timeline-item p {
         font-size: 16px;
+    }
+}
+
+/* CSS para pantallas más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .services-section {
+        padding: 30px 10px;
+    }
+
+    .services-header h2 {
+        font-size: 24px;
+    }
+
+    .counter-number {
+        font-size: 36px;
+    }
+
+    .counter {
+        font-size: 18px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+        padding: 10px;
+    }
+
+    .timeline-item h2 {
+        font-size: 18px;
+    }
+
+    .timeline-item p {
+        font-size: 14px;
     }
 }
