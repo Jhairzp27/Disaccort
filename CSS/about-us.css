@@ -377,97 +377,98 @@
         padding: 120px 10px;
     }
 
-    /* Ajustes de las tarjetas de historia, misión y visión */
-    /* Mover la tarjeta de Historia hacia arriba */
+    /* Ajustes de la tarjeta de Historia */
     .about-history .card {
         position: relative;
-        z-index: 10; /* Asegura que esté encima de otros elementos */
-        top: -100px; /* Ajuste según lo que necesites para que la tarjeta suba */
-        margin-top: 0; /* Eliminar cualquier margen superior existente */
-        width: 90%; /* Asegura que ocupe todo el ancho de la pantalla */
-        flex-direction: column; /* Cambia a apilar los elementos verticalmente */
-        width: 90%; /* Aumenta el ancho de la tarjeta para aprovechar el espacio disponible */
-        
+        z-index: 10;
+        top: -100px; /* Ajuste la posición hacia arriba */
+        margin-top: 0;
+        margin-bottom: 1px; /* Ajusta este valor para controlar la distancia debajo de Historia */
+        width: 90%;
+        flex-direction: column;
     }
 
     .about-history .author-image {
-        width: 100%; /* La imagen ocupará todo el ancho en pantallas pequeñas */
+        width: 100%;
         height: auto;
     }
 
     .about-history .card-content {
-        width: 100%; /* El contenido también ocupará todo el ancho */
+        width: 100%;
         padding: 20px;
     }
 
     .about-history h2 {
-        font-size: 22px; /* Reduce ligeramente el tamaño de la fuente en pantallas pequeñas */
+        font-size: 22px;
     }
 
     .about-history p {
-        font-size: 14px; /* Ajusta el tamaño del texto */
+        font-size: 14px;
     }
 
     .read-more {
-        font-size: 14px; /* Ajusta el tamaño del botón */
+        font-size: 14px;
         padding: 8px 16px;
     }
 
+    /* Ajustes de las tarjetas de Misión y Visión */
     .mission-vision-cards .card {
-        width: 100%; /* Las tarjetas ocupan el 100% del ancho en móviles */
+        width: 100%;
         max-width: none;
-        margin: 10px 0; /* Margen reducido para mantener espacio entre tarjetas */
-        padding: 15px; /* Reducir el padding para móviles */
-        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 20px 0; /* Ajusta este valor para controlar la distancia entre las tarjetas de Misión y Visión */
+        padding: 15px;
+        font-size: 14px;
         z-index: 10;
     }
-    .icon-container i {
-        font-size: 1.5em; /* Reducción del tamaño del ícono en móviles */
+
+    /* Control de la distancia superior de las tarjetas de Misión y Visión */
+    .mission-vision-cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 1px; /* Ajusta este valor para controlar la distancia superior de Misión y Visión respecto a Historia */
     }
 
-    .mission-vision-cards {
-        flex-direction: column; /* Poner las tarjetas en una columna */
-        align-items: center; /* Centrar las tarjetas */
-        width: 100%; /* Asegurarse de que ocupen todo el ancho */
+    .icon-container i {
+        font-size: 1.5em;
     }
 
     /* Imagen de fondo de misión y visión */
     .background-image img {
-        width: 100%; /* Asegura que la imagen se ajuste al ancho de la pantalla */
-        height: auto; /* Mantener la proporción de la imagen */
+        width: 100%;
+        height: auto;
         z-index: 0;
     }
 
+    /* Testimonios */
     .testimonials-carousel {
-        padding: 0 5px; /* Ajuste adicional para modo horizontal */
+        padding: 0 15px;
     }
 
     .testimonial-card {
-        width: 80%; /* Reducir el ancho en modo horizontal */
-        max-width: 250px; /* Limitar el ancho máximo */
-        height: auto; /* Asegurarse de que la altura sea flexible */
+        width: 80%;
+        max-width: 250px;
+        height: auto;
     }
 
-    /* Ajuste para la tarjeta del lado izquierdo en modo horizontal */
     .testimonial-card.left {
-        transform: translateX(-220px) scale(0.8); /* Mantener la escala y posición para la carta izquierda */
-        opacity: 0.8; /* Asegurar visibilidad */
+        transform: translateX(-220px) scale(0.8);
+        opacity: 0.8;
     }
 
-    /* Ajuste para la tarjeta del lado derecho en modo horizontal */
     .testimonial-card.right {
-        transform: translateX(220px) scale(0.8); /* Mantener la escala y posición para la carta derecha */
-        opacity: 0.8; /* Asegurar visibilidad */
+        transform: translateX(220px) scale(0.8);
+        opacity: 0.8;
     }
 
     .testimonial-card.inactive {
-        transform: translateX(250px); /* Controlar las tarjetas inactivas */
+        transform: translateX(250px);
         opacity: 0;
     }
 
     .testimonial-card.active {
-        transform: scale(1.05); /* Mantener la escala de la tarjeta activa */
-        height: auto; /* Asegurarse de que la tarjeta activa no se corte */
+        transform: scale(1.05);
+        height: auto;
     }
 }
 

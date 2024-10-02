@@ -203,13 +203,14 @@
     .services-header h2 {
         font-size: 28px;
     }
-
+    
     .counter-container {
         flex-direction: column;
         align-items: center;
     }
 
     .timeline-container {
+        margin-top: 70px;
         flex-direction: column;
         padding: 40px 10px;
     }

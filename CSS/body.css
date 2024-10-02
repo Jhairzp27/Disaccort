@@ -1,10 +1,10 @@
 /* Importar la fuente OPTIVerona desde la carpeta 'Assets' */
-@font-face {
+/* @font-face {
     font-family: 'OPTIVerona';
     src: url('/Assets/OPTIVerona.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 * {
     margin: 0;
