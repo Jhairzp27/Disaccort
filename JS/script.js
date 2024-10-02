@@ -217,3 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
     startAutoSlide();
 });
+
+//=======================BOTON DE REDIRECCIONAMIENTO============
+// Número de teléfono
+var phoneNumber = "593987883014"; // Reemplaza con tu número de WhatsApp
+
+// Obtener todos los botones con la clase 'read-more'
+var buttons = document.querySelectorAll(".read-more");
+
+// Asignar la función a cada botón
+buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        var message = this.getAttribute("data-message"); // Obtener el mensaje del atributo data-message
+        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+    });
+});
