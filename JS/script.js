@@ -241,15 +241,15 @@ const buttons = document.querySelectorAll('.read-more');
 // Asignar la función a cada botón
 buttons.forEach(function (button) {
   button.addEventListener('click', function () {
-    var message = this.getAttribute('data-message'); // Obtener el mensaje del atributo data-message
-    var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+    const message = this.getAttribute('data-message'); // Obtener el mensaje del atributo data-message
+    const url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
     window.open(url, '_blank');
   });
 
   // Agregar el evento touchstart para dispositivos móviles
   button.addEventListener('touchstart', function () {
-    var message = this.getAttribute('data-message');
-    var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+    const message = this.getAttribute('data-message');
+    const url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
     window.open(url, '_blank');
   });
 });
