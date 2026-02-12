@@ -2,9 +2,9 @@ name: CI/CD Disaccort
 
 on:
   push:
-    branches: [ main, "refactor/*", "feat/*", "fix/*" ]
+    branches: [main, 'refactor/*', 'feat/*', 'fix/*']
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # GitHub Pages
 permissions:
