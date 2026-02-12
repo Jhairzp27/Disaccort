@@ -1,507 +1,515 @@
 /* Degradado general de la sección */
 .about-section {
-    background: linear-gradient(
-        to bottom,
-        #1A1818, /* Color de la sección anterior */
-        #2C1E16 20%, /* Color más oscuro en el inicio */
-        #A96F44 50%, /* Color intermedio */
-        #D3B78B 80%  /* Color claro hacia abajo */
-    );
-    color: white;
-    padding: 50px 0;
-    position: relative;
-    overflow: hidden; /* Para evitar que contenido sobrepase los límites */
+  background: linear-gradient(
+    to bottom,
+    #1a1818,
+    /* Color de la sección anterior */ #2c1e16 20%,
+    /* Color más oscuro en el inicio */ #a96f44 50%,
+    /* Color intermedio */ #d3b78b 80% /* Color claro hacia abajo */
+  );
+  color: white;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden; /* Para evitar que contenido sobrepase los límites */
 }
 
 /* Ajustes de la sección de Historia y Misión/Vision */
 .about-history {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-    margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  margin-top: 0px;
 }
 
 .about-mission-vision {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1; /* Asegura que las tarjetas estén siempre sobre la imagen */
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Asegura que las tarjetas estén siempre sobre la imagen */
+  flex-direction: column;
 }
 
 /* Estilos para la tarjeta de "Nuestra Historia" */
 .about-history .card {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
-    flex-direction: row;
-    overflow: hidden;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px 0;
-    width: 80%;
-    max-width: 900px;
-    position: relative;
-    margin-top: 0px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  flex-direction: row;
+  overflow: hidden;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin: 20px 0;
+  width: 80%;
+  max-width: 900px;
+  position: relative;
+  margin-top: 0px;
 }
 
 .about-history .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7); /* Sombra más fuerte en hover */
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7); /* Sombra más fuerte en hover */
 }
 
 .about-history .author-image {
-    width: 40%; /* Asegura que la imagen ocupe el 40% del ancho de la tarjeta */
-    object-fit: cover;
-    height: auto; /* Mantiene las proporciones de la imagen */
+  width: 40%; /* Asegura que la imagen ocupe el 40% del ancho de la tarjeta */
+  object-fit: cover;
+  height: auto; /* Mantiene las proporciones de la imagen */
 }
 
 .about-history .card-content {
-    width: 60%; /* El contenido ocupará el 60% del ancho */
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 60%; /* El contenido ocupará el 60% del ancho */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about-history h2 {
-    font-family: 'Georgia', serif;
-    font-size: 26px;
-    color: #f7b801;
-    margin-bottom: 15px;
-    text-align: start;
+  font-family: 'Georgia', serif;
+  font-size: 26px;
+  color: #f7b801;
+  margin-bottom: 15px;
+  text-align: start;
 }
 
 .about-history p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #dcd0d0;
-    margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dcd0d0;
+  margin-bottom: 20px;
 }
 
 .read-more {
-    background-color: #d4af37; /* Color dorado */
-    color: #1A1818; /* Color oscuro para el texto */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Suave transición en color */
+  background-color: #d4af37; /* Color dorado */
+  color: #1a1818; /* Color oscuro para el texto */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Suave transición en color */
 }
 
 .read-more:hover {
-    background-color: #f2cb6b; /* Color más claro para el hover */
-    color: #1A1818; /* Mantener el contraste */
+  background-color: #f2cb6b; /* Color más claro para el hover */
+  color: #1a1818; /* Mantener el contraste */
 }
 
-
 .read-more-container {
-    text-align: center;
-    position: relative;
-    padding-bottom: 20px; /* Espacio debajo del botón */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px; /* Espacio debajo del botón */
 }
 
 .read-more-btn {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .read-more-btn:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .logo-container {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .company-logo {
-    max-width: 200px; /* Ajusta el tamaño del logo */
-    max-height: 200px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 200px; /* Ajusta el tamaño del logo */
+  max-height: 200px;
+  opacity: 0.8;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .company-logo:hover {
-    opacity: 1;
-    transform: scale(1.05); /* Efecto de hover */
+  opacity: 1;
+  transform: scale(1.05); /* Efecto de hover */
 }
 
 .author-info {
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
 }
 
 .author-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .author-role {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
-    text-align: right;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: right;
 }
 
 .social-icons a {
-    color: #f0803c; /* Dorado inicial */
-    margin-right: 10px;
-    font-size: 1.8em;
-    transition: color 0.3s ease;
-    float: right;
+  color: #f0803c; /* Dorado inicial */
+  margin-right: 10px;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
+  float: right;
 }
 
 .social-icons a:hover {
-    color: #f2cb6b; /* Color más claro en hover */
+  color: #f2cb6b; /* Color más claro en hover */
 }
-
 
 /* Ajustes de las tarjetas de Misión y Visión */
 .mission-vision-cards {
-    display: flex;
-    justify-content: space-between;
-    width: 80%; /* Ajusta el ancho de las tarjetas */
-    padding: 20px;
-    margin-top: 50px; /* Agrega un espacio entre la tarjeta de historia y las otras tarjetas */
-    position: relative; /* Las mantiene relativas para evitar que se solapen */
-    z-index: 2; /* Garantiza que las tarjetas estén por encima de la imagen */
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Ajusta el ancho de las tarjetas */
+  padding: 20px;
+  margin-top: 50px; /* Agrega un espacio entre la tarjeta de historia y las otras tarjetas */
+  position: relative; /* Las mantiene relativas para evitar que se solapen */
+  z-index: 2; /* Garantiza que las tarjetas estén por encima de la imagen */
 }
 
 /* Estilos para las tarjetas de Misión y Visión */
 .mission-vision-cards .card {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
-    width: 48%; /* Ajusta el ancho de cada tarjeta para que ocupen espacio lado a lado */
-    position: relative;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Efecto 3D */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin: 20px;
+  width: 48%; /* Ajusta el ancho de cada tarjeta para que ocupen espacio lado a lado */
+  position: relative;
 }
 
-.mission-vision-cards h3{
-    text-align: center;
+.mission-vision-cards h3 {
+  text-align: center;
 }
 
 /* Imagen de fondo para misión y visión */
 .background-image img {
-    width: 1200px; /* Ancho máximo de la imagen */
-    height: 200px; /* Altura ajustada a 200px */
-    opacity: 0.75; /* Aplica opacidad del 75% */
-    position: absolute;
-    z-index: 0; /* Asegura que esté detrás del contenido */
-    top: calc(50% - 55px); /* Ajusta la posición de la imagen hacia arriba (55px) */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra la imagen horizontal y verticalmente */
-    object-fit: cover; /* Cubre el área asignada sin distorsionarse */
-    max-width: 100%; /* Evita que la imagen se salga del contenedor en pantallas pequeñas */
+  width: 1200px; /* Ancho máximo de la imagen */
+  height: 200px; /* Altura ajustada a 200px */
+  opacity: 0.75; /* Aplica opacidad del 75% */
+  position: absolute;
+  z-index: 0; /* Asegura que esté detrás del contenido */
+  top: calc(50% - 55px); /* Ajusta la posición de la imagen hacia arriba (55px) */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la imagen horizontal y verticalmente */
+  object-fit: cover; /* Cubre el área asignada sin distorsionarse */
+  max-width: 100%; /* Evita que la imagen se salga del contenedor en pantallas pequeñas */
 }
 
 /* Contenedor de íconos */
 .icon-container {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .icon-container i {
-    font-size: 2em;
-    color: #FFC107; /* Color dorado para los íconos */
+  font-size: 2em;
+  color: #ffc107; /* Color dorado para los íconos */
 }
-
 
 /* Efecto hover para todas las tarjetas */
 .card:hover {
-    transform: scale(1.05); /* Escalado suave */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-    z-index: 3; /* Aumenta el z-index en hover para estar sobre otros elementos */
+  transform: scale(1.05); /* Escalado suave */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  z-index: 3; /* Aumenta el z-index en hover para estar sobre otros elementos */
 }
 
 /* Testimonios */
 .about-testimonials {
-    text-align: center;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-testimonials h2 {
-    color: #1f2025;
-    margin-bottom: 40px;
-    font-size: 2em;
+  color: #1f2025;
+  margin-bottom: 40px;
+  font-size: 2em;
 }
 
 /* Carrusel de testimonios */
 .testimonials-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 320px;
-    padding: 0 20px; /* Espacio adicional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 320px;
+  padding: 0 20px; /* Espacio adicional */
 }
 
 .testimonial-card {
-    position: absolute;
-    width: 250px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0.5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 15px; /* Espaciado entre tarjetas */
+  position: absolute;
+  width: 250px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  text-align: center;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  opacity: 0.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 15px; /* Espaciado entre tarjetas */
 }
 
 .testimonial-card img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .testimonial-card.active {
-    opacity: 1;
-    transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .testimonial-card.left {
-    transform: translateX(-250px) scale(0.9); /* Más espacio entre las tarjetas */
+  transform: translateX(-250px) scale(0.9); /* Más espacio entre las tarjetas */
 }
 
 .testimonial-card.right {
-    transform: translateX(250px) scale(0.9); /* Más espacio entre las tarjetas */
+  transform: translateX(250px) scale(0.9); /* Más espacio entre las tarjetas */
 }
 
 .testimonial-card.inactive {
-    transform: translateX(300px);
-    opacity: 0;
+  transform: translateX(300px);
+  opacity: 0;
 }
 .google-logo {
-    font-size: 1.5em;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #d4af37;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #d4af37;
 }
 
 .testimonial-rating i {
-    color: #d4af37;
+  color: #d4af37;
 }
 
 /* Controles del carrusel */
 .carousel-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding: 0 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 40px;
 }
 
 /* Estilo de los botones sin círculo */
 .carousel-button {
-    background: none; /* Eliminar fondo */
-    border: none; /* Eliminar bordes */
-    color: #1A1818; /* Color dorado para las flechas */
-    font-size: 2.5em; /* Aumentar tamaño de las flechas */
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
-    padding: 10px;
-    display: flex;
-    align-items: center;
+  background: none; /* Eliminar fondo */
+  border: none; /* Eliminar bordes */
+  color: #1a1818; /* Color dorado para las flechas */
+  font-size: 2.5em; /* Aumentar tamaño de las flechas */
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Transiciones suaves */
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .carousel-button:hover {
-    color: #fff; /* Las flechas cambian de color al hacer hover */
-    transform: scale(1.2); /* Aumentar ligeramente el tamaño al hacer hover */
+  color: #fff; /* Las flechas cambian de color al hacer hover */
+  transform: scale(1.2); /* Aumentar ligeramente el tamaño al hacer hover */
 }
 
 .carousel-button:focus {
-    outline: none; /* Eliminar el borde de enfoque al hacer clic */
+  outline: none; /* Eliminar el borde de enfoque al hacer clic */
 }
 
 /* Ajuste de la posición para las flechas */
 .carousel-button.prev {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .carousel-button.next {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 /* Ajustar la separación entre los botones y el borde del contenedor */
 .carousel-controls {
-    padding: 0 20px;
+  padding: 0 20px;
 }
-
 
 /* Íconos de las tarjetas inactivas */
 .testimonial-card .google-logo,
 .testimonial-card .testimonial-rating i {
-    color: #666; /* Color para tarjetas inactivas */
+  color: #666; /* Color para tarjetas inactivas */
 }
 
 /* Íconos de la tarjeta activa */
 .testimonial-card.active .google-logo,
 .testimonial-card.active .testimonial-rating i {
-    color: #d4af37; /* Color dorado para la tarjeta activa */
+  color: #d4af37; /* Color dorado para la tarjeta activa */
 }
 
 /* Responsividad */
 @media (max-width: 1024px) {
-    .testimonial-card {
-        width: 200px;
-    }
+  .testimonial-card {
+    width: 200px;
+  }
 }
 
 @media (max-width: 768px) {
-    /* General */
-    .about-section {
-        padding: 120px 10px;
-    }
+  /* General */
+  .about-section {
+    padding: 120px 10px;
+  }
 
-    /* Ajustes de la tarjeta de Historia */
-    .about-history .card {
-        position: relative;
-        z-index: 10;
-        top: -100px; /* Ajuste la posición hacia arriba */
-        margin-top: 0;
-        margin-bottom: 1px; /* Ajusta este valor para controlar la distancia debajo de Historia */
-        width: 90%;
-        flex-direction: column;
-    }
+  /* Ajustes de la tarjeta de Historia */
+  .about-history .card {
+    position: relative;
+    z-index: 10;
+    top: -100px; /* Ajuste la posición hacia arriba */
+    margin-top: 0;
+    margin-bottom: 1px; /* Ajusta este valor para controlar la distancia debajo de Historia */
+    width: 90%;
+    flex-direction: column;
+  }
 
-    .about-history .author-image {
-        width: 100%;
-        height: auto;
-    }
+  .about-history .author-image {
+    width: 100%;
+    height: auto;
+  }
 
-    .about-history .card-content {
-        width: 100%;
-        padding: 20px;
-    }
+  .about-history .card-content {
+    width: 100%;
+    padding: 20px;
+  }
 
-    .about-history h2 {
-        font-size: 22px;
-    }
+  .about-history h2 {
+    font-size: 22px;
+  }
 
-    .about-history p {
-        font-size: 14px;
-    }
+  .about-history p {
+    font-size: 14px;
+  }
 
-    .read-more {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
+  .read-more {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 
-    /* Ajustes de las tarjetas de Misión y Visión */
-    .mission-vision-cards .card {
-        width: 100%;
-        max-width: none;
-        margin: 20px 0; /* Ajusta este valor para controlar la distancia entre las tarjetas de Misión y Visión */
-        padding: 15px;
-        font-size: 14px;
-        z-index: 10;
-    }
+  /* Ajustes de las tarjetas de Misión y Visión */
+  .mission-vision-cards .card {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0; /* Ajusta este valor para controlar la distancia entre las tarjetas de Misión y Visión */
+    padding: 15px;
+    font-size: 14px;
+    z-index: 10;
+  }
 
-    /* Control de la distancia superior de las tarjetas de Misión y Visión */
-    .mission-vision-cards {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 1px; /* Ajusta este valor para controlar la distancia superior de Misión y Visión respecto a Historia */
-    }
+  /* Control de la distancia superior de las tarjetas de Misión y Visión */
+  .mission-vision-cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1px; /* Ajusta este valor para controlar la distancia superior de Misión y Visión respecto a Historia */
+  }
 
-    .icon-container i {
-        font-size: 1.5em;
-    }
+  .icon-container i {
+    font-size: 1.5em;
+  }
 
-    /* Imagen de fondo de misión y visión */
-    .background-image img {
-        width: 100%;
-        height: auto;
-        z-index: 0;
-    }
+  /* Imagen de fondo de misión y visión */
+  .background-image img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
 
-    /* Testimonios */
-    .testimonials-carousel {
-        padding: 0 15px;
-    }
+  /* Testimonios */
+  .testimonials-carousel {
+    padding: 0 15px;
+  }
 
-    .testimonial-card {
-        width: 80%;
-        max-width: 250px;
-        height: auto;
-    }
+  .testimonial-card {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+  }
 
-    .testimonial-card.left {
-        transform: translateX(-220px) scale(0.8);
-        opacity: 0.8;
-    }
+  .testimonial-card.left {
+    transform: translateX(-220px) scale(0.8);
+    opacity: 0.8;
+  }
 
-    .testimonial-card.right {
-        transform: translateX(220px) scale(0.8);
-        opacity: 0.8;
-    }
+  .testimonial-card.right {
+    transform: translateX(220px) scale(0.8);
+    opacity: 0.8;
+  }
 
-    .testimonial-card.inactive {
-        transform: translateX(250px);
-        opacity: 0;
-    }
+  .testimonial-card.inactive {
+    transform: translateX(250px);
+    opacity: 0;
+  }
 
-    .testimonial-card.active {
-        transform: scale(1.05);
-        height: auto;
-    }
+  .testimonial-card.active {
+    transform: scale(1.05);
+    height: auto;
+  }
 }
 
 /* Ajustes para tabletas o pantallas medianas */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .testimonials-carousel {
-        padding: 0 10px; /* Padding razonable en tabletas */
-    }
+  .testimonials-carousel {
+    padding: 0 10px; /* Padding razonable en tabletas */
+  }
 
-    .testimonial-card {
-        width: 75%; /* Ajuste para pantallas más grandes */
-        max-width: 320px; /* Evitar que las tarjetas se estiren demasiado */
-        height: auto; /* Altura adaptable */
-    }
+  .testimonial-card {
+    width: 75%; /* Ajuste para pantallas más grandes */
+    max-width: 320px; /* Evitar que las tarjetas se estiren demasiado */
+    height: auto; /* Altura adaptable */
+  }
 
-    /* Mantener las tarjetas izquierda y derecha visibles en tabletas */
-    .testimonial-card.left {
-        transform: translateX(-300px) scale(0.9); /* Ajustar desplazamiento para la izquierda */
-        opacity: 0.9; /* Mantener visibilidad */
-    }
+  /* Mantener las tarjetas izquierda y derecha visibles en tabletas */
+  .testimonial-card.left {
+    transform: translateX(-300px) scale(0.9); /* Ajustar desplazamiento para la izquierda */
+    opacity: 0.9; /* Mantener visibilidad */
+  }
 
-    .testimonial-card.right {
-        transform: translateX(300px) scale(0.9); /* Ajustar desplazamiento para la derecha */
-        opacity: 0.9; /* Mantener visibilidad */
-    }
+  .testimonial-card.right {
+    transform: translateX(300px) scale(0.9); /* Ajustar desplazamiento para la derecha */
+    opacity: 0.9; /* Mantener visibilidad */
+  }
 
-    .testimonial-card.inactive {
-        transform: translateX(300px); /* Controlar las tarjetas inactivas */
-        opacity: 0;
-    }
+  .testimonial-card.inactive {
+    transform: translateX(300px); /* Controlar las tarjetas inactivas */
+    opacity: 0;
+  }
 
-    .testimonial-card.active {
-        transform: scale(1.05); /* Escalado para la tarjeta activa */
-        height: auto; /* Altura adaptable */
-    }
+  .testimonial-card.active {
+    transform: scale(1.05); /* Escalado para la tarjeta activa */
+    height: auto; /* Altura adaptable */
+  }
 }

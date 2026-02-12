@@ -1,2 +1,21 @@
 Assets/PosibleUsoFuturo
 Assets/SinOptimizacion
+
+# Dependencias
+node_modules/
+
+# Logs de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configuración del editor (Ya lo tenías)
+.vscode/
+.idea/
+
+# Archivos del sistema operativo (Basura de Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Variables de entorno (Claves secretas)
+.env
