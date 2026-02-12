@@ -183,7 +183,6 @@ function debounce(func, wait) {
 
 // =========== TESTIMONIALS CAROUSEL ===========
 document.addEventListener('DOMContentLoaded', () => {
-  // const carousel = document.querySelector('.testimonials-carousel');
   const cards = document.querySelectorAll('.testimonial-card');
   const prevButton = document.querySelector('.carousel-button.prev');
   const nextButton = document.querySelector('.carousel-button.next');
