@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const phoneNumber = '593987883014'; // Reemplaza con tu número de WhatsApp
 
 // Obtener todos los botones con la clase 'read-more'
-var buttons = document.querySelectorAll('.read-more');
+const buttons = document.querySelectorAll('.read-more');
 
 // Asignar la función a cada botón
 buttons.forEach(function (button) {
