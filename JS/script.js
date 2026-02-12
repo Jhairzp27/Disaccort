@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //=======================BOTON DE REDIRECCIONAMIENTO============
 // Número de teléfono
-var phoneNumber = '593987883014'; // Reemplaza con tu número de WhatsApp
+const phoneNumber = '593987883014'; // Reemplaza con tu número de WhatsApp
 
 // Obtener todos los botones con la clase 'read-more'
 var buttons = document.querySelectorAll('.read-more');
