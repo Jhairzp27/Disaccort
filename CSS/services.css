@@ -1,295 +1,299 @@
 /* Ajuste de la sección de servicios */
 .services-section {
-    position: relative;
-    min-height: 90vh; /* Tamaño mayor para toda la sección */
-    padding: 100px 20px; /* Espacio para el contenido */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: #1a1818; /* Color de fondo principal */
-    color: #ffffff;
+  position: relative;
+  min-height: 90vh; /* Tamaño mayor para toda la sección */
+  padding: 100px 20px; /* Espacio para el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #1a1818; /* Color de fondo principal */
+  color: #ffffff;
 }
 
 /* Contenedores de los contadores */
 .counter-container {
-    display: flex;
-    justify-content: space-around; /* Centra los contadores */
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 50px;
-    align-items: center;
+  display: flex;
+  justify-content: space-around; /* Centra los contadores */
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 50px;
+  align-items: center;
 }
 
 .counter {
-    font-size: 24px;
-    color: #f2c101;
-    text-align: center;
-    font-weight: bold;
+  font-size: 24px;
+  color: #f2c101;
+  text-align: center;
+  font-weight: bold;
 }
 
 .counter-number {
-    font-size: 48px;
-    color: #ffffff;
+  font-size: 48px;
+  color: #ffffff;
 }
 
 .counter .texto {
-    margin-top: 10px; /* Controla la distancia entre el número y el texto */
-    font-size: 1em;
+  margin-top: 10px; /* Controla la distancia entre el número y el texto */
+  font-size: 1em;
 }
 
 /* Gradiente en la parte superior y estilo del título */
 .services-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .services-header h2 {
-    font-size: 36px;
-    color: #ffffff;
-    margin-bottom: 10px;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .services-header p {
-    font-size: 18px;
-    color: #ddd;
-    margin-bottom: 0px; /*Controla la distancia entre el párrafo y la línea de tiempo*/
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 0px; /*Controla la distancia entre el párrafo y la línea de tiempo*/
 }
 
 /* Estilos de la Línea de Tiempo */
 .timeline-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 80px 0;
-    padding: 80px 20px;
-    min-height: 800px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px 0;
+  padding: 80px 20px;
+  min-height: 800px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    height: 100%;
-    justify-content: space-between;
-    gap: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .timeline-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    z-index: 1;
-    border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  border-radius: 3px;
 }
 
 .timeline-line-filled {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 6px;
-    height: 0;
-    background: #f0803c;
-    transform: translateX(-50%);
-    z-index: 2;
-    border-radius: 3px;
-    transition: height 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 0;
+  background: #f0803c;
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 3px;
+  transition:
+    height 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Nodos de la Línea de Tiempo */
 .timeline-nodes {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 0;
-    z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  z-index: 3;
 }
 
 .timeline-node {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background: #666666;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-bottom: 70px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #666666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  margin-bottom: 70px;
 }
 
 .timeline-node.active {
-    background: #f0803c;
-    transform: scale(1.2);
+  background: #f0803c;
+  transform: scale(1.2);
 }
 
 .timeline-node i {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 /* Elementos de la línea de tiempo */
 .timeline-item {
-    position: relative;
-    width: calc(50% - 80px);
-    padding: 20px;
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.47s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    z-index: 2;
+  position: relative;
+  width: calc(50% - 80px);
+  padding: 20px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.47s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 2;
 }
 
 .timeline-item.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .timeline-item:nth-child(odd) {
-    align-self: flex-start;
-    transform: translateX(50px);
+  align-self: flex-start;
+  transform: translateX(50px);
 }
 
 .timeline-item:nth-child(even) {
-    align-self: flex-end;
-    transform: translateX(-50px);
+  align-self: flex-end;
+  transform: translateX(-50px);
 }
 
 .timeline-item h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #fff;
-    z-index: 3;
+  margin-top: 0;
+  font-size: 24px;
+  color: #fff;
+  z-index: 3;
 }
 
 .timeline-item p {
-    margin: 15px 0 0;
-    font-size: 18px;
-    color: #ddd;
+  margin: 15px 0 0;
+  font-size: 18px;
+  color: #ddd;
 }
 
 /* CSS para dispositivos móviles */
 @media (max-width: 768px) {
-    .services-section {
-        padding: 50px 10px;
-    }
+  .services-section {
+    padding: 50px 10px;
+  }
 
-    .services-header {
-        height: 80px;
-    }
+  .services-header {
+    height: 80px;
+  }
 
-    .services-header h2 {
-        font-size: 28px;
-    }
-    
-    .counter-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .services-header h2 {
+    font-size: 28px;
+  }
 
-    .timeline-container {
-        margin-top: 70px;
-        flex-direction: column;
-        padding: 40px 10px;
-    }
+  .counter-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .timeline {
-        width: 100%;
-        gap: 60px;
-    }
+  .timeline-container {
+    margin-top: 70px;
+    flex-direction: column;
+    padding: 40px 10px;
+  }
 
-    .timeline-line {
-        left: 20px;
-    }
+  .timeline {
+    width: 100%;
+    gap: 60px;
+  }
 
-    .timeline-line-filled {
-        left: 20px;
-    }
+  .timeline-line {
+    left: 20px;
+  }
 
-    .timeline-nodes {
-        left: 20px;
-        width: auto;
-    }
+  .timeline-line-filled {
+    left: 20px;
+  }
 
-    .timeline-node {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 60px;
-    }
+  .timeline-nodes {
+    left: 20px;
+    width: auto;
+  }
 
-    .timeline-item {
-        width: calc(100% - 60px);
-        margin-left: 60px;
-        margin-bottom: 20px;
-        align-self: flex-start;
-    }
+  .timeline-node {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 60px;
+  }
 
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        align-self: flex-start;
-        transform: translateX(0);
-    }
+  .timeline-item {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
 
-    .timeline-item h2 {
-        font-size: 20px;
-    }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    align-self: flex-start;
+    transform: translateX(0);
+  }
 
-    .timeline-item p {
-        font-size: 16px;
-    }
+  .timeline-item h2 {
+    font-size: 20px;
+  }
+
+  .timeline-item p {
+    font-size: 16px;
+  }
 }
 
 /* CSS para pantallas más pequeñas (hasta 480px) */
 @media (max-width: 480px) {
-    .services-section {
-        padding: 30px 10px;
-    }
+  .services-section {
+    padding: 30px 10px;
+  }
 
-    .services-header h2 {
-        font-size: 24px;
-    }
+  .services-header h2 {
+    font-size: 24px;
+  }
 
-    .counter-number {
-        font-size: 36px;
-    }
+  .counter-number {
+    font-size: 36px;
+  }
 
-    .counter {
-        font-size: 18px;
-    }
+  .counter {
+    font-size: 18px;
+  }
 
-    .timeline-item {
-        width: calc(100% - 40px);
-        margin-left: 40px;
-        padding: 10px;
-    }
+  .timeline-item {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    padding: 10px;
+  }
 
-    .timeline-item h2 {
-        font-size: 18px;
-    }
+  .timeline-item h2 {
+    font-size: 18px;
+  }
 
-    .timeline-item p {
-        font-size: 14px;
-    }
+  .timeline-item p {
+    font-size: 14px;
+  }
 }
