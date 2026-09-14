@@ -12,6 +12,7 @@ yarn-error.log*
 # Configuración del editor (Ya lo tenías)
 .vscode/
 .idea/
+.claude/
 
 # Archivos del sistema operativo (Basura de Mac/Windows)
 .DS_Store

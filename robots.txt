@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhairzp27.github.io/Disaccort/sitemap.xml
